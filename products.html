@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — MART</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">MART</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Shop</a></li>
+      <li><a href="cart.html">Cart <span class="cart-count" id="cart-count">0</span></a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <div class="page-header">
+    <h1>All Products</h1>
+    <p>Browse our wide selection of quality items</p>
+  </div>
+
+  <section class="shop-layout">
+    <!-- SIDEBAR FILTERS -->
+    <aside class="sidebar">
+      <h3>Filter</h3>
+      <div class="filter-group">
+        <label class="filter-label">Category</label>
+        <select id="cat-filter" class="filter-select">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="home">Home & Living</option>
+          <option value="fashion">Fashion</option>
+          <option value="beauty">Beauty</option>
+          <option value="sports">Sports</option>
+          <option value="food">Food</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Max Price: $<span id="price-val">200</span></label>
+        <input type="range" id="price-filter" min="10" max="500" value="200" class="price-range"/>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Sort By</label>
+        <select id="sort-filter" class="filter-select">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+      <button class="btn-primary" id="apply-filters" style="width:100%;margin-top:1rem">Apply</button>
+    </aside>
+
+    <!-- PRODUCT GRID -->
+    <main>
+      <div class="search-bar-wrap">
+        <input type="text" id="search-input" placeholder="🔍  Search products..." class="search-input"/>
+      </div>
+      <div class="products-grid" id="products-grid"></div>
+    </main>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">MART</span>
+        <p>Your one-stop shop for everything you need.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="cart.html">Cart</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 MART General Store. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="page.js"></script>
+</body>
+</html>
